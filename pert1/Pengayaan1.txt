@@ -7,3 +7,16 @@ Apa yang terjadi jika kita mencoba mengubah nilai suatu konstanta setelah objek 
 Bagaimana cara mendefinisikan konstanta dalam bahasa Java?
 
 Jawaban
+1. Function adalah metode yang mengembalikan nilai, sedangkan procedure tidak mengembalikan nilai dan hanya menjalankan suatu aksi. Function digunakan saat hasil perlu dipakai kembali, sementara procedure hanya untuk mengeksekusi perintah
+2. Konstanta penting karena nilainya tidak bisa diubah, sehingga menjaga konsistensi data dan mencegah kesalahan akibat perubahan yang tidak sengaja. Ini membuat program lebih aman dan lebih mudah diprediksi
+3. Jika kita mencoba mengubah nilai variabel yang sudah diberi final, Java akan menolak saat kompilasi dan memunculkan error
+Contoh:
+class Pengguna {
+    final double faktorAktivitas = 1.2;
+    
+    void contohMethod() {
+        faktorAktivitas = 1.5;  // ERROR: cannot assign a value to final variable
+    }
+}
+error: cannot assign a value to final variable faktorAktivitas
+4. Konstanta didefinisikan dengan kata kunci final

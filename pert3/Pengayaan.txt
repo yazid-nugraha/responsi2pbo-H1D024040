@@ -8,3 +8,8 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
 
 Jawaban:
+1.Digunakan untuk membuat class turunan yang mewarisi atribut dan method dari class induk sehingga tidak perlu menulis ulang kode yang sama
+2. Overloading yaitu nama method sama, parameter berbeda, dalam class yang sama sedangkan Overriding yaitu method ditulis ulang di subclass dengan parameter yang sama untuk mengubah perilaku
+3. Untuk memanggil constructor parent class agar inisialisasi atribut induk tetap dilakukan dengan benar
+4. Subclass tidak bisa mengaksesnya dan akan muncul error. Solusinya adalah menyediakan getter (dan setter jika diperlukan) di class induk
+5. Mengurangi duplikasi kode, mempermudah pemeliharaan, dan memungkinkan polymorphism sehingga program lebih terstruktur dan efisien

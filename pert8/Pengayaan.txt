@@ -6,3 +6,10 @@ Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
 3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
 4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
 5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+
+Jawaban
+1. Interface itu dibuat supaya semua class yang memakainya punya pola perilaku yang sama. Intinya sebagai aturan yang harus dipenuhi. Jadi begitu sebuah class mengimplementasikan interface, dia wajib menyediakan method yang sudah dideklarasikan. Alhasil, sistem bisa lebih rapi karena setiap class yang pakai interface dijamin mengikuti kontrak yang sama
+2. Interface bebas diimplementasikan oleh banyak class karena yang diberikan hanya aturan, bukan cara kerja. Maknanya, satu aturan bisa punya banyak interpretasi sesuai kebutuhan masing-masing class. Desain sistem jadi lebih fleksibel karena kita bisa menambah implementasi baru tanpa mengubah interface yang sudah ada
+3. extends menggambarkan hubungan pewarisan sifat, seperti anak yang mewarisi karakter induknya. implements lebih ke komitmen memenuhi aturan tertentu. Jadi extends bicara identitas, sedangkan implements bicara kemampuan yang harus dipenuhi oleh class tersebut
+4. Default method muncul supaya interface bisa berkembang tanpa merusak program lama. Jika interface ditambah method baru, class lama tetap aman karena sudah ada implementasi default. Dengan begitu, sistem tetap kompatibel tanpa harus memaksa semua class untuk diperbarui
+5. Multiple interface tidak menimbulkan konflik karena yang diwariskan hanya aturan, bukan kode atau state. Ini membuat class bisa mengambil banyak kemampuan sekaligus tanpa khawatir tabrakan perilaku. Desain tetap fleksibel, tapi tidak membawa kompleksitas yang biasanya muncul pada multiple inheritance

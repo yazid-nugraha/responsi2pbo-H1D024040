@@ -9,3 +9,10 @@
 4. Bagaimana keyword super membantu membedakan atribut yang memiliki nama sama antara parent dan child?
 
 5. Mengapa pendekatan inheritance lebih efisien dibanding menyalin ulang seluruh atribut dan method ke dalam class Member?
+
+Jawaban
+1. Agar atribut dasar milik Customer (nama, idCustomer, totalBelanja) terisi lewat constructor parent. Subclass wajib memanggil constructor parent sebelum menambah atributnya sendiri
+2. Agar informasi dasar Customer tetap tampil tanpa menulis ulang. Setelah itu, Member menambah info tambahan seperti poin dan level
+3. Misalnya parent menghitung nilai dasar, dan subclass ingin menambah perhitungan lain. Subclass perlu memanggil super.hitung...() agar proses dasarnya tidak hilang
+4. Jika nama atribut sama, pemanggilan langsung mengacu ke child. super.namaAtribut dipakai untuk mengakses versi milik parent
+5. Karena menghindari duplikasi atribut dan method. Perubahan cukup dilakukan di parent sehingga kode lebih ringkas dan mudah dirawat
