@@ -6,3 +6,10 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
 4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
 5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+
+Jawaban
+1. Abstract class adalah class yang tidak bisa dibuat objeknya dan digunakan sebagai cetakan awal untuk subclass. Kita membutuhkannya ketika ingin memastikan semua subclass memiliki struktur yang sama melalui method yang wajib diimplementasikan, sekaligus tetap memberi kebebasan pada masing-masing subclass untuk menentukan perilakunya sendiri. Abstract class juga membantu menjaga konsistensi dan mengurangi duplikasi kode
+2. Abstract class tidak bisa diinstansiasi dan dapat memiliki abstract method yang belum memiliki isi. Class biasa bisa dibuat objeknya dan seluruh method di dalamnya harus memiliki implementasi. Abstract class berfungsi sebagai kerangka dasar, sedangkan class biasa digunakan untuk membuat objek yang siap dipakai
+3. Subclass wajib mengimplementasikannya karena abstract method hanya berupa deklarasi tanpa isi. Supaya objek yang dibuat dari subclass memiliki perilaku yang lengkap, subclass harus memberikan implementasi. Hal ini menjaga konsistensi struktur dan mencegah terjadinya method kosong ketika program dijalankan
+4. Abstract method tidak boleh memiliki isi karena fungsinya hanya sebagai kontrak yang menentukan apa saja yang harus ada pada subclass. Jika memiliki isi, method tersebut bukan lagi abstract. Setiap subclass bisa memiliki cara berbeda dalam menjalankan fungsinya, sehingga isi method diserahkan sepenuhnya kepada subclass
+5. Abstract class mendukung polimorfisme karena satu referensi abstract class dapat digunakan untuk menyimpan objek dari berbagai subclass. Ketika method dipanggil, Java akan menjalankan implementasi sesuai jenis objeknya. Polimorfisme ini memungkinkan satu struktur yang sama menghasilkan perilaku yang berbeda tergantung pada subclass yang digunakan
